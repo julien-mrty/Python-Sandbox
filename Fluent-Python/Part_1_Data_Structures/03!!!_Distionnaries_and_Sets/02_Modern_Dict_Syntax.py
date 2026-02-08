@@ -34,3 +34,8 @@ dump(**{"a": 1,
 
 # /!\ In this case, duplicate keys are allowed. Later occurrences overwrite previous ones.
 dump(**{'a': 0, **{'x': 1}, 'y': 2, **{'z': 3, 'x': 4}})
+
+"""
+ASK CHATGPT WHAT IS GOING ON ABOVE
+why does this syntax exists? Is this really useful are juste here to show the possibilities of the language?
+"""
