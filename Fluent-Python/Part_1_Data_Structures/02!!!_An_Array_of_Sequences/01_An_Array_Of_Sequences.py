@@ -27,5 +27,4 @@ Another way of grouping sequence types is by mutability:
   For example, list, bytearray, array.array, and collections.deque.
 - Immutable sequences:
   For example, tuple, str, and bytes.
-
 """

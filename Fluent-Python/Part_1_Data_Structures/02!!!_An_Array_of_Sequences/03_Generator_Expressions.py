@@ -10,7 +10,7 @@ symbols = '$¢£¥€¤'
 my_tuple = tuple(ord(symbol) for symbol in symbols)
 print(my_tuple)
 
-# Initialize tuple from generator expression
+# Initialize array from generator expression
 import array
 my_array= array.array("I", (ord(symbol) for symbol in symbols))
 print(my_array)

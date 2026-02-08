@@ -3,7 +3,8 @@
 Special methods: meant to be called by python interpreter
 
 Python variable-sized collections has a "size" field holding the number of item in the collection.
-If my_object is an instance of those built-ins, len(my_object) retrieves the "size" field -> much faster than calling a method
+If my_object is an instance of those built-ins, len(my_object) retrieves the "size" field -> much faster than calling 
+a method
 """
 
 """
