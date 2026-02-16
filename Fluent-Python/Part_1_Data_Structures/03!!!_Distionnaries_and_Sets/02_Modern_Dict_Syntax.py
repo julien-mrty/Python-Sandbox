@@ -18,6 +18,12 @@ print(refined_country_dial)
 """
 Unpacking mapping
 
+** means:
+- In function definitions → collect keyword arguments
+- In function calls → unpack dictionary into keyword arguments
+- In dict literals → merge dictionaries
+- Last duplicate key wins
+
 We can apply ** to more than one argument in a function call. This works when keys are all strings and unique across all 
 arguments (because duplicate keyword arguments are forbidden).
 """
@@ -36,6 +42,12 @@ dump(**{"a": 1,
 dump(**{'a': 0, **{'x': 1}, 'y': 2, **{'z': 3, 'x': 4}})
 
 """
-ASK CHATGPT WHAT IS GOING ON ABOVE
-why does this syntax exists? Is this really useful are juste here to show the possibilities of the language?
+Merging Mappings with |
+Usually the type of the new mapping will be the same as the type of the left operand but it can be the type of the 
+second operand if user-defined types are involved.
 """
+d1 = {'a': 1, 'b': 3}
+d2 = {'a': 2, 'b': 4, 'c': 6}
+print(d1 | d2)
+d1 |= d2
+print(d1)
