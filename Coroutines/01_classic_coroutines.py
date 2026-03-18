@@ -4,6 +4,7 @@ from typing import Generator
 def worker_fibo() -> Generator[None, int, None]:
     a = 0
     b = 1
+    yield
     while True:
         a, b = b, a + b
         yield b

@@ -1,12 +1,13 @@
 import asyncio
 
+
 async def worker_fibo(queue):
     a = 0
     b = 1
     while True:
-        await asyncio.sleep(1)
         a, b = b, a + b
         await queue.put(b)
+        await asyncio.sleep(0.001)
 
 async def worker_average(in_queue, out_queue):
     average = 0.0
@@ -18,7 +19,6 @@ async def worker_average(in_queue, out_queue):
         average = total / count
         count += 1
         await out_queue.put(average)
-
 
 async def main():
     q_fibo = asyncio.Queue()
