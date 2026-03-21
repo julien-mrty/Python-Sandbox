@@ -30,7 +30,10 @@ def main():
     target_fibo_val = 1000
     target_average = 100
 
-    # "Event loop"
+    """
+    "Event loop"
+    The way I wrote the "event loop" really show that I didn't understand how coroutines and event loop worked
+    """
     while fibo_val < target_fibo_val and average < target_average:
         fibo_val = next(coroutine_fibo)
         print("fibo_val: ", fibo_val)

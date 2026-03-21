@@ -7,7 +7,7 @@ async def worker_fibo(queue):
     while True:
         a, b = b, a + b
         await queue.put(b)
-        await asyncio.sleep(0.001)
+        await asyncio.sleep(0.001) # worker_fibo wakes up every millisecond
 
 async def worker_average(in_queue, out_queue):
     average = 0.0
@@ -32,7 +32,10 @@ async def main():
     target_fibo_val = 1000
     target_average = 100
 
-    # "Event loop"
+    """
+    "Event loop"
+    The way I wrote the "event loop" really show that I didn't understand how coroutines and event loop worked
+    """
     while fibo_val < target_fibo_val and average < target_average:
         fibo_val = await q_fibo.get()
         print("fibo_val: ", fibo_val)
